@@ -9,13 +9,19 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<String> vowels = new ArrayList<>();
-    ArrayList<String> consonants = new ArrayList<>();
-    ArrayList<String> syllables = new ArrayList<>();
+    private ArrayList<Character> vowels = new ArrayList<>();
+    private ArrayList<Character> consonants = new ArrayList<>();
+    //private ArrayList<Character> syllables = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +30,24 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+        try{
+
+            ReadCharactersFromFile(String.valueOf(R.raw.vowels),false);
+
+        } catch (Exception e) { // If there isn't a file, create a new one with no progress.
+
+            System.err.println(getResources().getString(R.string.error_load_vowels_progress));
+
+            try {
+
+                ReadCharactersFromFile(String.valueOf(R.raw.vowels), true);
+
+            } catch (IOException ioe) {
+
+                System.err.println(getResources().getString(R.string.error_load_vowels_default));
+
             }
-        });
+        }
     }
 
     @Override
@@ -54,5 +70,43 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void ReadCharactersFromFile(String fileName, boolean isDefault) throws IOException{
+
+        String line;
+        Character c = new Character();
+
+        if(isDefault){
+
+            InputStream isv = getApplicationContext().getResources().openRawResource(Integer.parseInt(fileName));
+            InputStreamReader isrv = new InputStreamReader(isv);
+            BufferedReader bufferedReader = new BufferedReader(isrv);
+            while((line = bufferedReader.readLine()) != null){
+
+                String [] contents = line.split(" ");
+                c.setCharacter(contents[0]);
+                c.setPronunciation(contents[1]);
+                c.setLearnRating(0);
+                vowels.add(c);
+
+            }
+        }
+
+        else{
+
+            FileInputStream fisv = getApplicationContext().openFileInput(fileName);
+            InputStreamReader isrv = new InputStreamReader(fisv);
+            BufferedReader bufferedReader = new BufferedReader(isrv);
+            while((line = bufferedReader.readLine()) != null){
+
+                String [] contents = line.split(" ");
+                c.setCharacter(contents[0]);
+                c.setPronunciation(contents[1]);
+                c.setLearnRating(Integer.parseInt(contents[2]));
+                vowels.add(c);
+
+            }
+        }
     }
 }

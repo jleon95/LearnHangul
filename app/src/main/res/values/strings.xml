@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">LearnHangul</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Error messages -->
+    <string name="error_load_vowels_progress">Failed to load progress status for vowels.</string>
+    <string name="error_load_vowels_default">Failed to load default file for vowels.</string>
 </resources>
