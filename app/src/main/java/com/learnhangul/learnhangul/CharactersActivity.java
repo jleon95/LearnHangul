@@ -23,7 +23,7 @@ public class CharactersActivity extends AppCompatActivity {
         characters = (ArrayList<Character>) getIntent().getExtras().get("com.learnhangul.learnhangul.characters");
 
         ListView character_list = (ListView) findViewById(R.id.character_list);
-        ArrayAdapter<Character> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,android.R.id.text1,characters);
+        ArrayAdapter<Character> adapter = new RowAdapter(this,characters);
         character_list.setAdapter(adapter);
 
     }
