@@ -1,17 +1,21 @@
 package com.learnhangul.learnhangul;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -32,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         try{
 
-            ReadCharactersFromFile(String.valueOf(R.raw.vowels),false);
+            vowels = ReadCharactersFromFile(String.valueOf(R.raw.vowels),false);
 
         } catch (Exception e) { // If there isn't a file, create a new one with no progress.
 
@@ -40,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
 
-                ReadCharactersFromFile(String.valueOf(R.raw.vowels), true);
+                vowels = ReadCharactersFromFile(String.valueOf(R.raw.vowels), true);
 
             } catch (IOException ioe) {
 
@@ -48,6 +52,56 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }
+
+        try{
+
+            consonants = ReadCharactersFromFile(String.valueOf(R.raw.consonants),false);
+
+        } catch (Exception e) { // If there isn't a file, create a new one with no progress.
+
+            System.err.println(getResources().getString(R.string.error_load_consonants_progress));
+
+            try {
+
+                consonants = ReadCharactersFromFile(String.valueOf(R.raw.consonants), true);
+
+            } catch (IOException ioe) {
+
+                System.err.println(getResources().getString(R.string.error_load_consonants_default));
+
+            }
+        }
+
+        //ListView listaview = (ListView) findViewById(R.id.test_list);
+        //ArrayAdapter<Character> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,android.R.id.text1,vowels);
+        //listaview.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onDestroy(){
+
+        try {
+
+            SaveCharactersToFile("vowels.txt", vowels);
+
+        } catch (IOException ioe){
+
+            System.err.println(getResources().getString(R.string.error_save_vowels_progress));
+
+        }
+
+        try {
+
+            SaveCharactersToFile("consonants.txt",consonants);
+
+        } catch (IOException ioe){
+
+            System.err.println(getResources().getString(R.string.error_save_consonants_progress));
+
+        }
+
+        super.onDestroy();
+
     }
 
     @Override
@@ -72,41 +126,57 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void ReadCharactersFromFile(String fileName, boolean isDefault) throws IOException{
+    private ArrayList<Character> ReadCharactersFromFile(String fileName, boolean isDefault) throws IOException{
 
         String line;
-        Character c = new Character();
+        ArrayList<Character> fileCharacters = new ArrayList<>();
 
         if(isDefault){
 
-            InputStream isv = getApplicationContext().getResources().openRawResource(Integer.parseInt(fileName));
-            InputStreamReader isrv = new InputStreamReader(isv);
-            BufferedReader bufferedReader = new BufferedReader(isrv);
+            InputStream is = getApplicationContext().getResources().openRawResource(Integer.parseInt(fileName));
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader bufferedReader = new BufferedReader(isr);
             while((line = bufferedReader.readLine()) != null){
 
                 String [] contents = line.split(" ");
+                Character c = new Character();
                 c.setCharacter(contents[0]);
                 c.setPronunciation(contents[1]);
                 c.setLearnRating(0);
-                vowels.add(c);
+                c.setActive(false);
+                fileCharacters.add(c);
 
             }
         }
 
         else{
 
-            FileInputStream fisv = getApplicationContext().openFileInput(fileName);
-            InputStreamReader isrv = new InputStreamReader(fisv);
-            BufferedReader bufferedReader = new BufferedReader(isrv);
+            FileInputStream fis = getApplicationContext().openFileInput(fileName);
+            InputStreamReader isr = new InputStreamReader(fis);
+            BufferedReader bufferedReader = new BufferedReader(isr);
             while((line = bufferedReader.readLine()) != null){
 
                 String [] contents = line.split(" ");
+                Character c = new Character();
                 c.setCharacter(contents[0]);
                 c.setPronunciation(contents[1]);
                 c.setLearnRating(Integer.parseInt(contents[2]));
-                vowels.add(c);
+                c.setActive(Boolean.parseBoolean(contents[3]));
+                fileCharacters.add(c);
 
             }
         }
+
+        return fileCharacters;
+    }
+
+    private void SaveCharactersToFile(String fileName, ArrayList<Character> characters) throws IOException{
+
+        FileOutputStream outputFStream = openFileOutput(fileName, Context.MODE_PRIVATE);
+        for(Character c: characters)
+
+            outputFStream.write((c.toString()+"\n").getBytes());
+
+        outputFStream.close();
     }
 }

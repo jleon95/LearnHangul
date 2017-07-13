@@ -10,6 +10,16 @@ class Character {
     private String pronunciation = new String(); // The pronunciation in Latin alphabet.
     private int learnRating = 0; // The progress in learning this particular character.
 
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    private boolean active = false;
+
     public int getLearnRating() {
         return learnRating;
     }
@@ -32,6 +42,13 @@ class Character {
 
     public void setCharacter(String character) {
         this.character = character;
+    }
+
+    @Override
+    public String toString(){
+
+        return character + " " + pronunciation + " " + learnRating + " " + active;
+
     }
 
 }

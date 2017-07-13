@@ -5,4 +5,8 @@
     <!-- Error messages -->
     <string name="error_load_vowels_progress">Failed to load progress status for vowels.</string>
     <string name="error_load_vowels_default">Failed to load default file for vowels.</string>
+    <string name="error_load_consonants_progress">Failed to load progress status for consonants.</string>
+    <string name="error_load_consonants_default">Failed to load default file for consonants.</string>
+    <string name="error_save_vowels_progress">Failed to save progress status for vowels.</string>
+    <string name="error_save_consonants_progress">Failed to save progress status for consonants.</string>
 </resources>
