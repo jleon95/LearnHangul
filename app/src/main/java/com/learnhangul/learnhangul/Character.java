@@ -1,10 +1,12 @@
 package com.learnhangul.learnhangul;
 
+import java.io.Serializable;
+
 /**
  * Created by javi on 12/07/17.
  */
 
-class Character {
+class Character implements Serializable{
 
     private String character = new String(); // The character itself.
     private String pronunciation = new String(); // The pronunciation in Latin alphabet.
@@ -47,7 +49,7 @@ class Character {
     @Override
     public String toString(){
 
-        return character + " " + pronunciation + " " + learnRating + " " + active;
+        return character + " " + pronunciation + " " + learnRating + " " + Boolean.toString(active);
 
     }
 

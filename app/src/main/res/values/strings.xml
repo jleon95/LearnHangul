@@ -9,4 +9,11 @@
     <string name="error_load_consonants_default">Failed to load default file for consonants.</string>
     <string name="error_save_vowels_progress">Failed to save progress status for vowels.</string>
     <string name="error_save_consonants_progress">Failed to save progress status for consonants.</string>
+
+    <!-- Button texts -->
+    <string name="button_main_characters">Study</string>
+    <string name="button_review_characters">Review</string>
+    <string name="button_study_vowels">Vowels</string>
+    <string name="button_study_consonants">Consonants</string>
+    <string name="button_study_tutorial">About Hangul</string>
 </resources>

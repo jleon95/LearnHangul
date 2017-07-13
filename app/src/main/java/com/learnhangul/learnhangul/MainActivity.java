@@ -1,16 +1,17 @@
 package com.learnhangul.learnhangul;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.io.BufferedReader;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -72,9 +74,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        //ListView listaview = (ListView) findViewById(R.id.test_list);
-        //ArrayAdapter<Character> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,android.R.id.text1,vowels);
-        //listaview.setAdapter(adapter);
+        setStudyButton();
+
     }
 
     @Override
@@ -124,6 +125,22 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+
+        super.onActivityResult(requestCode,resultCode,data);
+
+        if(requestCode == 1){
+
+            if(resultCode == RESULT_OK){
+
+                vowels = (ArrayList<Character>) data.getExtras().get("com.learnhangul.learnhangul.vowels");
+                consonants = (ArrayList<Character>) data.getExtras().get("com.learnhangul.learnhangul.consonants");
+
+            }
+        }
     }
 
     private ArrayList<Character> ReadCharactersFromFile(String fileName, boolean isDefault) throws IOException{
@@ -178,5 +195,20 @@ public class MainActivity extends AppCompatActivity {
             outputFStream.write((c.toString()+"\n").getBytes());
 
         outputFStream.close();
+    }
+
+    private void setStudyButton(){
+
+        final Button study = (Button) findViewById(R.id.button_main_study);
+        study.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+                Intent goStudy = new Intent(MainActivity.this, StudyActivity.class);
+                goStudy.putExtra("com.learnhangul.learnhangul.vowels",vowels);
+                goStudy.putExtra("com.learnhangul.learnhangul.consonants",consonants);
+                startActivityForResult(goStudy,1);
+
+            }
+        });
     }
 }

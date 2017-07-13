@@ -10,14 +10,22 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.learnhangul.learnhangul.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:context="com.learnhangul.learnhangul.StudyActivity"
+    tools:showIn="@layout/activity_study">
 
     <Button
-        android:id="@+id/button_main_study"
+        android:id="@+id/button_study_vowels"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_main_characters"
+        android:text="@string/button_study_vowels"
+        android:textAllCaps="false"
+    />
+
+    <Button
+        android:id="@+id/button_study_consonants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_study_consonants"
         android:textAllCaps="false"
     />
 

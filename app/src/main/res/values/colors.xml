@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Colors for GUI elements -->
     <item name="blue" type="color">#003478</item>
     <item name="red" type="color">#C60C30</item>
     <item name="white" type="color">#FFFFFF</item>
     <item name="black" type="color">#000000</item>
-    
+
+    <!-- Colors for progress in learning a character -->
+    <item name="green_learned" type="color">#33F021</item>
+    <item name="yellow_halfway" type="color">#F0E721</item>
+    <item name="orange_just_started" type="color">#F09E21</item>
+    <item name="red_difficult" type="color">#F02121</item>
+    <item name="grey_not_selected" type="color">#B8B8B8</item>
+
+
 </resources>
