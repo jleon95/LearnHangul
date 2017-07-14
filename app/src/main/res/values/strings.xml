@@ -16,4 +16,6 @@
     <string name="button_study_vowels">Vowels</string>
     <string name="button_study_consonants">Consonants</string>
     <string name="button_study_tutorial">How Hangul works</string>
+    <string name="button_review_from_character">Find pronunciation</string>
+    <string name="button_review_from_pronunciation">Find character</string>
 </resources>
