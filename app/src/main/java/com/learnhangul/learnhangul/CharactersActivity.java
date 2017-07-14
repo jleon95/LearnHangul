@@ -2,6 +2,7 @@ package com.learnhangul.learnhangul;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -23,6 +24,7 @@ public class CharactersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_characters);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.blue));
         setSupportActionBar(toolbar);
 
         characters = (ArrayList<Character>) getIntent().getExtras().get("com.learnhangul.learnhangul.characters");

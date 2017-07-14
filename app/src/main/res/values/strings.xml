@@ -11,11 +11,16 @@
     <string name="error_save_consonants_progress">Failed to save progress status for consonants.</string>
 
     <!-- Button texts -->
-    <string name="button_main_characters">Study</string>
-    <string name="button_review_characters">Review</string>
+    <string name="button_main_study">Study</string>
+    <string name="button_main_review">Review</string>
     <string name="button_study_vowels">Vowels</string>
     <string name="button_study_consonants">Consonants</string>
     <string name="button_study_tutorial">How Hangul works</string>
     <string name="button_review_from_character">Find pronunciation</string>
     <string name="button_review_from_pronunciation">Find character</string>
+
+    <!-- Popup windows -->
+    <string name="popup_text">Are you sure you want to exit the quiz?</string>
+    <string name="popup_yes">Yes</string>
+    <string name="popup_no">Cancel</string>
 </resources>

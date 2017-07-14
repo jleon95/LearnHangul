@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.blue));
         setSupportActionBar(toolbar);
 
         try{ // Try to load a previous configuration.
@@ -75,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         setStudyButton();
+        setReviewButton();
 
     }
 
@@ -215,6 +218,21 @@ public class MainActivity extends AppCompatActivity {
                 goStudy.putExtra("com.learnhangul.learnhangul.vowels",vowels);
                 goStudy.putExtra("com.learnhangul.learnhangul.consonants",consonants);
                 startActivityForResult(goStudy,1);
+
+            }
+        });
+    }
+
+    private void setReviewButton(){
+
+        final Button study = (Button) findViewById(R.id.button_main_review);
+        study.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+                Intent goReview = new Intent(MainActivity.this, ReviewActivity.class);
+                goReview.putExtra("com.learnhangul.learnhangul.vowels",vowels);
+                goReview.putExtra("com.learnhangul.learnhangul.consonants",consonants);
+                startActivityForResult(goReview,1);
 
             }
         });
