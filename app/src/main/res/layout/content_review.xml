@@ -9,6 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:gravity="center"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.learnhangul.learnhangul.ReviewActivity"
@@ -19,7 +20,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_review_from_character"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/white"
         android:textAllCaps="false"
+        android:backgroundTint="@color/blue"
         />
 
     <Button
@@ -27,7 +32,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_review_from_pronunciation"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/white"
         android:textAllCaps="false"
+        android:backgroundTint="@color/blue"
         />
 
 </LinearLayout>

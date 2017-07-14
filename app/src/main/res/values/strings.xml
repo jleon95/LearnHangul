@@ -19,8 +19,13 @@
     <string name="button_review_from_character">Find pronunciation</string>
     <string name="button_review_from_pronunciation">Find character</string>
 
-    <!-- Popup windows -->
+    <!-- Popup window when pressing back in a quiz -->
     <string name="popup_text">Are you sure you want to exit the quiz?</string>
     <string name="popup_yes">Yes</string>
     <string name="popup_no">Cancel</string>
+
+    <!-- Information about the ListView elements in the character study section -->
+    <string name="character_column">Character</string>
+    <string name="pronunciation_column">Pronunciation</string>
+
 </resources>

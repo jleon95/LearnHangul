@@ -13,9 +13,58 @@
     tools:context="com.learnhangul.learnhangul.CharactersActivity"
     tools:showIn="@layout/activity_characters">
 
+    <RelativeLayout
+        android:id="@+id/characters_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/info_study_characters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/character_column"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:paddingLeft="20dp"
+            android:paddingBottom="5dp"
+        />
+
+        <TextView
+            android:id="@+id/info_study_pronunciations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pronunciation_column"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:paddingRight="25dp"
+            android:paddingBottom="5dp"
+        />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/character_study_element_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/blue"
+        android:layout_below="@+id/characters_title">
+    </LinearLayout>
+
     <ListView
         android:id="@+id/character_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:divider="@color/red"
+        android:dividerHeight="1sp"
+        android:layout_below="@+id/character_study_element_divider">
     </ListView>
+
 </RelativeLayout>
