@@ -15,5 +15,5 @@
     <string name="button_review_characters">Review</string>
     <string name="button_study_vowels">Vowels</string>
     <string name="button_study_consonants">Consonants</string>
-    <string name="button_study_tutorial">About Hangul</string>
+    <string name="button_study_tutorial">How Hangul works</string>
 </resources>

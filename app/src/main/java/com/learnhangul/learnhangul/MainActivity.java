@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        try{
+        try{ // Try to load a previous configuration.
 
-            vowels = ReadCharactersFromFile(String.valueOf(R.raw.vowels),false);
+            vowels = ReadCharactersFromFile("vowels.txt",false);
 
         } catch (Exception e) { // If there isn't a file, create a new one with no progress.
 
@@ -55,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        try{
+        try{ // Try to load a previous configuration.
 
-            consonants = ReadCharactersFromFile(String.valueOf(R.raw.consonants),false);
+            consonants = ReadCharactersFromFile("consonants.txt",false);
 
         } catch (Exception e) { // If there isn't a file, create a new one with no progress.
 
@@ -79,7 +79,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onDestroy(){
+    protected void onStop(){
+
+        super.onStop();
 
         try {
 
@@ -100,6 +102,10 @@ public class MainActivity extends AppCompatActivity {
             System.err.println(getResources().getString(R.string.error_save_consonants_progress));
 
         }
+    }
+
+    @Override
+    protected void onDestroy(){
 
         super.onDestroy();
 
@@ -185,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return fileCharacters;
+
     }
 
     private void SaveCharactersToFile(String fileName, ArrayList<Character> characters) throws IOException{
@@ -195,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
             outputFStream.write((c.toString()+"\n").getBytes());
 
         outputFStream.close();
+
     }
 
     private void setStudyButton(){

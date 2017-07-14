@@ -36,12 +36,18 @@ public class StudyActivity extends AppCompatActivity {
 
         if(requestCode == 1){
 
-            if(resultCode == RESULT_OK){
+            if(resultCode == RESULT_OK)
 
-                vowels = (ArrayList<Character>) data.getExtras().get("com.learnhangul.learnhangul.vowels");
-                consonants = (ArrayList<Character>) data.getExtras().get("com.learnhangul.learnhangul.consonants");
+                vowels = (ArrayList<Character>) data.getExtras().get("com.learnhangul.learnhangul.characters");
 
-            }
+        }
+
+        if(requestCode == 2){
+
+            if(resultCode == RESULT_OK)
+
+                consonants = (ArrayList<Character>) data.getExtras().get("com.learnhangul.learnhangul.characters");
+
         }
     }
 
@@ -78,7 +84,7 @@ public class StudyActivity extends AppCompatActivity {
 
                 Intent goConsonants = new Intent(StudyActivity.this, CharactersActivity.class);
                 goConsonants.putExtra("com.learnhangul.learnhangul.characters",consonants);
-                startActivityForResult(goConsonants,1);
+                startActivityForResult(goConsonants,2);
 
             }
         });
