@@ -1,9 +1,7 @@
 package com.learnhangul.learnhangul;
 
-import android.app.LauncherActivity;
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,11 +12,11 @@ import java.util.ArrayList;
 
 class RowAdapter extends ArrayAdapter<Character> {
 
-    Context context;
-    Character [] data;
+    private Context context;
+    private Character [] data;
     private static LayoutInflater inflater = null;
 
-    public RowAdapter(Context context, ArrayList<Character> data) {
+    RowAdapter(Context context, ArrayList<Character> data) {
 
         super(context,0,data);
         this.context = context;
@@ -51,42 +49,55 @@ class RowAdapter extends ArrayAdapter<Character> {
             view = inflater.inflate(R.layout.list_row,null);
 
         TextView character = (TextView) view.findViewById(R.id.row_layout_character);
-        /*final Character element = data[i];
-
-        character.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean isSelected = element.isActive() ? false : true;
-                element.setActive(isSelected);
-            }
-        });*/
-
         character.setText(data[i].getCharacter());
-        int learnRating = data[i].getLearnRating();
-
-        if(!data[i].isActive())
-
-            character.setTextColor(ContextCompat.getColor(context,R.color.never_selected_grey));
-
-        else if(learnRating < 0)
-
-            character.setTextColor(ContextCompat.getColor(context,R.color.selected_red_difficult));
-
-        else if(learnRating == 0)
-
-            character.setTextColor(ContextCompat.getColor(context,R.color.selected_orange_just_started));
-
-        else if(learnRating > 0 && learnRating < 4)
-
-            character.setTextColor(ContextCompat.getColor(context,R.color.selected_yellow_halfway));
-
-        else
-
-            character.setTextColor(ContextCompat.getColor(context,R.color.selected_green_learned));
-
+        selectColor(data[i],character);
         TextView pronunciation = (TextView) view.findViewById(R.id.row_layout_pronunciation);
         pronunciation.setText(data[i].getPronunciation());
         return view;
 
+    }
+
+    private void selectColor(Character c, TextView text){
+
+        int learnRating = c.getLearnRating();
+
+        if(!c.isActive()) { // If you don't want to review the character, it is colored darker.
+
+            if(learnRating < 0)
+
+                text.setTextColor(ContextCompat.getColor(context,R.color.not_selected_red_difficult));
+
+            else if(learnRating == 0)
+
+                text.setTextColor(ContextCompat.getColor(context,R.color.never_selected_grey));
+
+            else if(learnRating > 0 && learnRating < 4)
+
+                text.setTextColor(ContextCompat.getColor(context,R.color.not_selected_yellow_halfway));
+
+            else
+
+                text.setTextColor(ContextCompat.getColor(context,R.color.not_selected_green_learned));
+
+        }
+
+        else { // If you select the character for reviewing, it is colored brighter.
+
+            if (learnRating < 0)
+
+                text.setTextColor(ContextCompat.getColor(context, R.color.selected_red_difficult));
+
+            else if (learnRating == 0)
+
+                text.setTextColor(ContextCompat.getColor(context, R.color.selected_orange_just_started));
+
+            else if (learnRating > 0 && learnRating < 4)
+
+                text.setTextColor(ContextCompat.getColor(context, R.color.selected_yellow_halfway));
+
+            else
+
+                text.setTextColor(ContextCompat.getColor(context, R.color.selected_green_learned));
+        }
     }
 }
