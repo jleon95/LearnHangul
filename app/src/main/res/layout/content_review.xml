@@ -25,6 +25,7 @@
         android:textColor="@color/white"
         android:textAllCaps="false"
         android:backgroundTint="@color/blue"
+        app:backgroundTint="@color/blue"
         />
 
     <Button
@@ -37,6 +38,7 @@
         android:textColor="@color/white"
         android:textAllCaps="false"
         android:backgroundTint="@color/blue"
+        app:backgroundTint="@color/blue"
         />
 
 </LinearLayout>

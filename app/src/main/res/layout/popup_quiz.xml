@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layout_popup_quiz_from_character"
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerInParent="true"
     android:backgroundTint="@color/white"
+    app:backgroundTint="@color/white"
     android:clickable="false"
     style="@style/Widget.AppCompat.Button">
 
@@ -54,6 +56,7 @@
             android:textColor="@color/blue"
             android:textAllCaps="false"
             android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
         />
 
         <Button
@@ -66,6 +69,7 @@
             android:textColor="@color/blue"
             android:textAllCaps="false"
             android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
         />
 
     </LinearLayout>
