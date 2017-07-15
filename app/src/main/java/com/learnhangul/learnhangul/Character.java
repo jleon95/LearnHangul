@@ -2,11 +2,10 @@ package com.learnhangul.learnhangul;
 
 import java.io.Serializable;
 
-/**
- * Created by javi on 12/07/17.
- */
-
 class Character implements Serializable{
+
+    private static final int MAX_LEARN_RATING = 7;
+    private static final int MIN_LEARN_RATING = -1;
 
     private String character = new String(); // The character itself.
     private String pronunciation = new String(); // The pronunciation in Latin alphabet.
@@ -27,7 +26,22 @@ class Character implements Serializable{
     }
 
     public void setLearnRating(int learnRating) {
-        this.learnRating = learnRating;
+        if(learnRating >= MAX_LEARN_RATING)
+            this.learnRating = MAX_LEARN_RATING;
+        else if(learnRating <= MIN_LEARN_RATING)
+            this.learnRating = MIN_LEARN_RATING;
+        else
+            this.learnRating = learnRating;
+    }
+
+    public void incrementLearnRating(){
+        if(this.learnRating < MAX_LEARN_RATING)
+            this.learnRating += 1;
+    }
+
+    public void decrementLearnRating(){
+        if(this.learnRating > MIN_LEARN_RATING)
+            this.learnRating -= 1;
     }
 
     public String getPronunciation() {

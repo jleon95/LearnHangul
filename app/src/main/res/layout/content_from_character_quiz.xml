@@ -12,8 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="앉"
-        android:textSize="50sp"
+        android:textSize="70sp"
         android:textColor="@color/red"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="60dp"
@@ -30,7 +29,7 @@
         <Button
             android:id="@+id/quiz_first_option"
             android:layout_width="40pt"
-            android:layout_height="25pt"
+            android:layout_height="30pt"
             android:textSize="25sp"
             android:textColor="@color/blue"
             android:textAllCaps="false"
@@ -41,7 +40,7 @@
         <Button
             android:id="@+id/quiz_second_option"
             android:layout_width="40pt"
-            android:layout_height="25pt"
+            android:layout_height="30pt"
             android:textSize="25sp"
             android:textColor="@color/blue"
             android:layout_below="@+id/quiz_first_option"
@@ -64,7 +63,7 @@
         <Button
             android:id="@+id/quiz_third_option"
             android:layout_width="40pt"
-            android:layout_height="25pt"
+            android:layout_height="30pt"
             android:textSize="25sp"
             android:textColor="@color/blue"
             android:textAllCaps="false"
@@ -75,7 +74,7 @@
         <Button
             android:id="@+id/quiz_fourth_option"
             android:layout_width="40pt"
-            android:layout_height="25pt"
+            android:layout_height="30pt"
             android:textSize="25sp"
             android:textColor="@color/blue"
             android:layout_below="@+id/quiz_third_option"
@@ -98,7 +97,7 @@
         <Button
             android:id="@+id/quiz_fifth_option"
             android:layout_width="40pt"
-            android:layout_height="25pt"
+            android:layout_height="30pt"
             android:textSize="25sp"
             android:textColor="@color/blue"
             android:textAllCaps="false"
@@ -109,7 +108,7 @@
         <Button
             android:id="@+id/quiz_sixth_option"
             android:layout_width="40pt"
-            android:layout_height="25pt"
+            android:layout_height="30pt"
             android:textSize="25sp"
             android:textColor="@color/blue"
             android:layout_below="@+id/quiz_fifth_option"
