@@ -12,3 +12,8 @@
 ㅊ ch
 ㅎ h
 ㅇ ng
+ㄲ kk
+ㄸ tt
+ㅃ bb
+ㅆ ss
+ㅉ jj
