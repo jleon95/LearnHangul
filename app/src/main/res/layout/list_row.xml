@@ -17,7 +17,7 @@
     />
 
     <TextView
-        android:id="@+id/row_layout_pronunciation"
+        android:id="@+id/row_layout_transcription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/row_pronunciation_size"

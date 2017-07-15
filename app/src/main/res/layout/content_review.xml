@@ -29,10 +29,10 @@
         />
 
     <Button
-        android:id="@+id/button_review_from_pronunciation"
+        android:id="@+id/button_review_from_transcription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_review_from_pronunciation"
+        android:text="@string/button_review_from_transcription"
         android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="@color/white"

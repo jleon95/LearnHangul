@@ -8,24 +8,24 @@ class Character implements Serializable{
     private static final int MIN_LEARN_RATING = -1;
 
     private String character = new String(); // The character itself.
-    private String pronunciation = new String(); // The pronunciation in Latin alphabet.
+    private String transcription = new String(); // The transcription in Latin alphabet.
     private int learnRating = 0; // The progress in learning this particular character.
 
-    public boolean isActive() {
+    boolean isActive() {
         return active;
     }
 
-    public void setActive(boolean active) {
+    void setActive(boolean active) {
         this.active = active;
     }
 
     private boolean active = false;
 
-    public int getLearnRating() {
+    int getLearnRating() {
         return learnRating;
     }
 
-    public void setLearnRating(int learnRating) {
+    void setLearnRating(int learnRating) {
         if(learnRating >= MAX_LEARN_RATING)
             this.learnRating = MAX_LEARN_RATING;
         else if(learnRating <= MIN_LEARN_RATING)
@@ -34,25 +34,25 @@ class Character implements Serializable{
             this.learnRating = learnRating;
     }
 
-    public void incrementLearnRating(){
+    void incrementLearnRating(){
         if(this.learnRating < MAX_LEARN_RATING)
             this.learnRating += 1;
     }
 
-    public void decrementLearnRating(){
+    void decrementLearnRating(){
         if(this.learnRating > MIN_LEARN_RATING)
             this.learnRating -= 1;
     }
 
-    public String getPronunciation() {
-        return pronunciation;
+    String getTranscription() {
+        return transcription;
     }
 
-    public void setPronunciation(String pronunciation) {
-        this.pronunciation = pronunciation;
+    void setTranscription(String transcription) {
+        this.transcription = transcription;
     }
 
-    public String getCharacter() {
+    String getCharacter() {
         return character;
     }
 
@@ -63,7 +63,7 @@ class Character implements Serializable{
     @Override
     public String toString(){
 
-        return character + " " + pronunciation + " " + learnRating + " " + Boolean.toString(active);
+        return character + " " + transcription + " " + learnRating + " " + Boolean.toString(active);
 
     }
 

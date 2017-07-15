@@ -54,7 +54,7 @@ public class FromCharacterQuizActivity extends AppCompatActivity {
 
         for(int i = 0 ; i < nVowels ; i++) {
 
-            transcriptions.add(vowels.get(i).getPronunciation());
+            transcriptions.add(vowels.get(i).getTranscription());
 
             if (vowels.get(i).isActive())
 
@@ -64,7 +64,7 @@ public class FromCharacterQuizActivity extends AppCompatActivity {
 
         for(int i = 0 ; i < nConsonants ; i++) {
 
-            transcriptions.add(consonants.get(i).getPronunciation());
+            transcriptions.add(consonants.get(i).getTranscription());
 
             if (consonants.get(i).isActive())
 
@@ -138,7 +138,7 @@ public class FromCharacterQuizActivity extends AppCompatActivity {
                 String transcription = button.getText().toString();
 
                 // Reward for correct answer (limits specified in Character class)
-                if(transcription == chosen.getPronunciation())
+                if(transcription.equals(chosen.getTranscription()))
 
                     chosen.incrementLearnRating();
 
@@ -227,7 +227,7 @@ public class FromCharacterQuizActivity extends AppCompatActivity {
         HashSet<String> possibleTranscriptions = new HashSet<>();
         TextView characterText = (TextView) findViewById(R.id.quiz_character);
         characterText.setText(chosen.getCharacter());
-        possibleTranscriptions.add(chosen.getPronunciation());
+        possibleTranscriptions.add(chosen.getTranscription());
 
         while(possibleTranscriptions.size() < 6) // A set makes avoiding repetitions easier
 

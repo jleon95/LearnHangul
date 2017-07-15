@@ -34,10 +34,10 @@
         />
 
         <TextView
-            android:id="@+id/info_study_pronunciations"
+            android:id="@+id/info_study_transcriptions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pronunciation_column"
+            android:text="@string/transcription_column"
             android:textSize="15sp"
             android:textStyle="bold"
             android:textColor="@color/blue"

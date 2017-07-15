@@ -16,8 +16,8 @@
     <string name="button_study_vowels">Vowels</string>
     <string name="button_study_consonants">Consonants</string>
     <string name="button_study_tutorial">How Hangul works</string>
-    <string name="button_review_from_character">Find pronunciation</string>
-    <string name="button_review_from_pronunciation">Find character</string>
+    <string name="button_review_from_character">Find transcription</string>
+    <string name="button_review_from_transcription">Find character</string>
 
     <!-- Popup window when pressing back in a quiz -->
     <string name="popup_text">Are you sure you want to exit the quiz?</string>
@@ -26,6 +26,6 @@
 
     <!-- Information about the ListView elements in the character study section -->
     <string name="character_column">Character</string>
-    <string name="pronunciation_column">Pronunciation</string>
+    <string name="transcription_column">Transcription</string>
 
 </resources>

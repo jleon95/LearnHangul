@@ -59,7 +59,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FromPronunciationQuizActivity"
+            android:name=".FromTranscriptionQuizActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

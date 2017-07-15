@@ -51,8 +51,8 @@ class RowAdapter extends ArrayAdapter<Character> {
         TextView character = (TextView) view.findViewById(R.id.row_layout_character);
         character.setText(data[i].getCharacter());
         selectColor(data[i],character);
-        TextView pronunciation = (TextView) view.findViewById(R.id.row_layout_pronunciation);
-        pronunciation.setText(data[i].getPronunciation());
+        TextView transcription = (TextView) view.findViewById(R.id.row_layout_transcription);
+        transcription.setText(data[i].getTranscription());
         return view;
 
     }

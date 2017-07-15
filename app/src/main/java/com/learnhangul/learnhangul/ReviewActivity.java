@@ -31,7 +31,7 @@ public class ReviewActivity extends AppCompatActivity {
         //syllables = (ArrayList<Character>) getIntent().getExtras().get("com.learnhangul.learnhangul.syllables");
 
         setFromCharacterButton();
-        setFromPronunciationButton();
+        setFromTranscriptionButton();
 
     }
 
@@ -78,17 +78,17 @@ public class ReviewActivity extends AppCompatActivity {
         });
     }
 
-    private void setFromPronunciationButton(){
+    private void setFromTranscriptionButton(){
 
-        final Button study = (Button) findViewById(R.id.button_review_from_pronunciation);
+        final Button study = (Button) findViewById(R.id.button_review_from_transcription);
         study.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
-                Intent goPronunciationQuiz = new Intent(ReviewActivity.this, FromPronunciationQuizActivity.class);
-                goPronunciationQuiz.putExtra("com.learnhangul.learnhangul.vowels",vowels);
-                goPronunciationQuiz.putExtra("com.learnhangul.learnhangul.consonants",consonants);
-                //goPronunciationQuiz.putExtra("com.learnhangul.learnhangul.syllables",syllables);
-                startActivityForResult(goPronunciationQuiz,1);
+                Intent goTranscriptionQuiz = new Intent(ReviewActivity.this, FromTranscriptionQuizActivity.class);
+                goTranscriptionQuiz.putExtra("com.learnhangul.learnhangul.vowels",vowels);
+                goTranscriptionQuiz.putExtra("com.learnhangul.learnhangul.consonants",consonants);
+                //goTranscriptionQuiz.putExtra("com.learnhangul.learnhangul.syllables",syllables);
+                startActivityForResult(goTranscriptionQuiz,1);
 
             }
         });
