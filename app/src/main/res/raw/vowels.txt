@@ -8,3 +8,14 @@
 ㅕ yeo
 ㅛ yo
 ㅠ yu
+ㅐ ae
+ㅔ e
+ㅒ yae
+ㅖ ye
+ㅢ ui
+ㅚ oe
+ㅘ wa
+ㅙ wae
+ㅞ we
+ㅝ wo
+ㅟ wi
