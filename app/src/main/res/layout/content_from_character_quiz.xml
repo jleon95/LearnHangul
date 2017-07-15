@@ -1,8 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layout_quiz_from_character"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/quiz_character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="앉"
+        android:textSize="50sp"
+        android:textColor="@color/red"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="60dp"
+    />
+
+    <LinearLayout
+        android:id="@+id/layout_quiz_options1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_below="@+id/quiz_character">
+
+        <Button
+            android:id="@+id/quiz_first_option"
+            android:layout_width="40pt"
+            android:layout_height="25pt"
+            android:textSize="25sp"
+            android:textColor="@color/blue"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
+        />
+
+        <Button
+            android:id="@+id/quiz_second_option"
+            android:layout_width="40pt"
+            android:layout_height="25pt"
+            android:textSize="25sp"
+            android:textColor="@color/blue"
+            android:layout_below="@+id/quiz_first_option"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_quiz_options2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/layout_quiz_options1">
+
+        <Button
+            android:id="@+id/quiz_third_option"
+            android:layout_width="40pt"
+            android:layout_height="25pt"
+            android:textSize="25sp"
+            android:textColor="@color/blue"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
+        />
+
+        <Button
+            android:id="@+id/quiz_fourth_option"
+            android:layout_width="40pt"
+            android:layout_height="25pt"
+            android:textSize="25sp"
+            android:textColor="@color/blue"
+            android:layout_below="@+id/quiz_third_option"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_quiz_options3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/layout_quiz_options2">
+
+        <Button
+            android:id="@+id/quiz_fifth_option"
+            android:layout_width="40pt"
+            android:layout_height="25pt"
+            android:textSize="25sp"
+            android:textColor="@color/blue"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
+        />
+
+        <Button
+            android:id="@+id/quiz_sixth_option"
+            android:layout_width="40pt"
+            android:layout_height="25pt"
+            android:textSize="25sp"
+            android:textColor="@color/blue"
+            android:layout_below="@+id/quiz_fifth_option"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>
