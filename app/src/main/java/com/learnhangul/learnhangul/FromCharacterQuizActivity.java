@@ -149,8 +149,6 @@ public class FromCharacterQuizActivity extends AppCompatActivity {
                 setNextQuestion();
             }
         });
-
-
     }
 
     public Character chooseNext(){

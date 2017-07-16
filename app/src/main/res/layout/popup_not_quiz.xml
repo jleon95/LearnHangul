@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_popup_not_quiz"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:backgroundTint="@color/white"
+    app:backgroundTint="@color/white"
+    android:clickable="false"
+    style="@style/Widget.AppCompat.Button">
+
+    <TextView
+        android:id="@+id/popup_not_quiz_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5sp"
+        android:paddingRight="5sp"
+        android:paddingLeft="5sp"
+        android:paddingBottom="4sp"
+        android:text="@string/popup_not_quiz_text"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/popup_not_quiz_element_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/red"
+        android:layout_below="@+id/popup_not_quiz_text">
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/popup_not_quiz_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/popup_not_quiz_understood"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/white"
+        app:backgroundTint="@color/white"
+        android:layout_below="@id/popup_not_quiz_element_divider"
+        android:layout_centerHorizontal="true"
+    />
+
+</RelativeLayout>

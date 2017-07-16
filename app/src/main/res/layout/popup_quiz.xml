@@ -19,7 +19,7 @@
         android:paddingRight="5sp"
         android:paddingLeft="5sp"
         android:paddingBottom="4sp"
-        android:text="@string/popup_text"
+        android:text="@string/popup_exit_quiz_text"
         android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="@color/blue"

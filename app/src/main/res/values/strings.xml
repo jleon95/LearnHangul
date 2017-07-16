@@ -20,9 +20,13 @@
     <string name="button_review_from_transcription">Find character</string>
 
     <!-- Popup window when pressing back in a quiz -->
-    <string name="popup_text">Are you sure you want to exit the quiz?</string>
+    <string name="popup_exit_quiz_text">Are you sure you want to exit the quiz?</string>
     <string name="popup_yes">Yes</string>
     <string name="popup_no">Cancel</string>
+
+    <!-- Popup window when trying to start a quiz without enough characters selected -->
+    <string name="popup_not_quiz_text">You need to select at least 2 characters to start doing quizzes</string>
+    <string name="popup_not_quiz_understood">Understood</string>
 
     <!-- Information about the ListView elements in the character study section -->
     <string name="character_column">Character</string>

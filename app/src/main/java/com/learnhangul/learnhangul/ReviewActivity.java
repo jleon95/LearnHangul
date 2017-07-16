@@ -5,16 +5,24 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.PopupWindow;
 
 import java.util.ArrayList;
+
+import static android.R.string.cancel;
 
 public class ReviewActivity extends AppCompatActivity {
 
     private ArrayList<Character> vowels = new ArrayList<>();
     private ArrayList<Character> consonants = new ArrayList<>();
     //private ArrayList<Character> syllables = new ArrayList<>();
+
+    private PopupWindow notStartQuizWindow;
 
 
     @Override
@@ -68,12 +76,47 @@ public class ReviewActivity extends AppCompatActivity {
         study.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
-                Intent goCharacterQuiz = new Intent(ReviewActivity.this, FromCharacterQuizActivity.class);
-                goCharacterQuiz.putExtra("com.learnhangul.learnhangul.vowels",vowels);
-                goCharacterQuiz.putExtra("com.learnhangul.learnhangul.consonants",consonants);
-                //goCharacterQuiz.putExtra("com.learnhangul.learnhangul.syllables",syllables);
-                startActivityForResult(goCharacterQuiz,1);
+                int activeCharacters = 0;
 
+                for(Character c: vowels)
+
+                    if(c.isActive())
+
+                        activeCharacters += 1;
+
+                for(Character c: consonants)
+
+                    if(c.isActive())
+
+                        activeCharacters += 1;
+
+                if(activeCharacters > 1) { // We need at least 2 characters to start doing quizzes
+
+                    Intent goCharacterQuiz = new Intent(ReviewActivity.this, FromCharacterQuizActivity.class);
+                    goCharacterQuiz.putExtra("com.learnhangul.learnhangul.vowels", vowels);
+                    goCharacterQuiz.putExtra("com.learnhangul.learnhangul.consonants", consonants);
+                    //goCharacterQuiz.putExtra("com.learnhangul.learnhangul.syllables",syllables);
+                    startActivityForResult(goCharacterQuiz, 1);
+
+                }
+
+                else{
+
+                    LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+                    final View popupView = inflater.inflate(R.layout.popup_not_quiz,(ViewGroup) findViewById(R.id.layout_popup_not_quiz));
+                    notStartQuizWindow = new PopupWindow(popupView, Toolbar.LayoutParams.WRAP_CONTENT, Toolbar.LayoutParams.WRAP_CONTENT,true);
+                    notStartQuizWindow.showAtLocation(findViewById(R.id.content_review), Gravity.CENTER,0,0);
+
+                    final Button understood = (Button) popupView.findViewById(R.id.popup_not_quiz_ok);
+                    understood.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v){
+
+                            notStartQuizWindow.dismiss();
+
+                        }
+                    });
+                }
             }
         });
     }
