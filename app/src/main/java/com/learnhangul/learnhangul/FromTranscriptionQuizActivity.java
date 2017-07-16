@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -137,15 +138,31 @@ public class FromTranscriptionQuizActivity extends AppCompatActivity {
 
                 Button button = (Button) view;
                 String character = button.getText().toString();
+                RelativeLayout result = (RelativeLayout) findViewById(R.id.layout_quiz2_result);
+                TextView result_text = (TextView) findViewById(R.id.quiz2_result_text);
 
                 // Reward for correct answer (limits specified in Character class)
-                if(character.equals(chosen.getCharacter()))
+                if(character.equals(chosen.getCharacter())) {
 
                     chosen.incrementLearnRating();
+                    result.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.selected_green_learned));
+                    result_text.setText(getResources().getText(R.string.answer_correct_pre)
+                            + chosen.getCharacter()
+                            + getResources().getText(R.string.answer_mid)
+                            + chosen.getTranscription() + ".");
 
-                else // Penalization for wrong answer
+                }
+
+                else { // Penalization for wrong answer
 
                     chosen.decrementLearnRating();
+                    result.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.selected_red_difficult));
+                    result_text.setText(getResources().getText(R.string.answer_incorrect_pre)
+                            + chosen.getCharacter()
+                            + getResources().getText(R.string.answer_mid)
+                            + chosen.getTranscription() + ".");
+
+                }
 
                 setNextQuestion();
 

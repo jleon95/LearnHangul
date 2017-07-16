@@ -32,4 +32,9 @@
     <string name="character_column">Character</string>
     <string name="transcription_column">Transcription</string>
 
+    <!-- Information about correctness of an answer in the quizzes -->
+    <string name="answer_correct_pre">Correct.&#160;</string>
+    <string name="answer_incorrect_pre">Incorrect.&#160;</string>
+    <string name="answer_mid">&#160;matches with&#160;</string>
+
 </resources>
