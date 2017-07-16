@@ -84,17 +84,18 @@ public class FromCharacterQuizActivity extends AppCompatActivity {
             setAnswerButton(b);
 
         setNextQuestion();
+
     }
 
     @Override
     public void onBackPressed(){
 
         LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
-        final View popupView = inflater.inflate(R.layout.popup_quiz,(ViewGroup) findViewById(R.id.layout_popup_quiz_from_character));
+        final View popupView = inflater.inflate(R.layout.popup_quiz,(ViewGroup) findViewById(R.id.layout_popup_quiz));
         goBackWindow = new PopupWindow(popupView, Toolbar.LayoutParams.WRAP_CONTENT, Toolbar.LayoutParams.WRAP_CONTENT,true);
         goBackWindow.showAtLocation(findViewById(R.id.layout_quiz_from_character), Gravity.CENTER,0,0);
 
-        final Button cancel = (Button) popupView.findViewById(R.id.popup_quiz_from_character_no);
+        final Button cancel = (Button) popupView.findViewById(R.id.popup_quiz_no);
         cancel.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -104,7 +105,7 @@ public class FromCharacterQuizActivity extends AppCompatActivity {
             }
         });
 
-        final Button accept = (Button) popupView.findViewById(R.id.popup_quiz_from_character_yes);
+        final Button accept = (Button) popupView.findViewById(R.id.popup_quiz_yes);
         accept.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -147,10 +148,12 @@ public class FromCharacterQuizActivity extends AppCompatActivity {
                     chosen.decrementLearnRating();
 
                 setNextQuestion();
+
             }
         });
     }
 
+    // Choose a character for the next question favoring those with lower learn ratings
     public Character chooseNext(){
 
         int [] chosen = new int[2];
@@ -211,8 +214,7 @@ public class FromCharacterQuizActivity extends AppCompatActivity {
 
             return vowels.get(activeVowels.get(0));
 
-        // If we only have one consonant (return it)
-        else
+        else // If we only have one consonant (return it)
 
             return consonants.get(activeConsonants.get(0));
 

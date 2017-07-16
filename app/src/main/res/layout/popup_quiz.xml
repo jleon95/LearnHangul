@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/layout_popup_quiz_from_character"
+    android:id="@+id/layout_popup_quiz"
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -12,7 +12,7 @@
     style="@style/Widget.AppCompat.Button">
 
     <TextView
-        android:id="@+id/popup_quiz_from_character_text"
+        android:id="@+id/popup_quiz_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="5sp"
@@ -31,11 +31,11 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/red"
-        android:layout_below="@+id/popup_quiz_from_character_text">
+        android:layout_below="@+id/popup_quiz_text">
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/layout_popup_quiz_from_character_buttons"
+        android:id="@+id/layout_popup_quiz_buttons"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
         android:layout_centerHorizontal="true">
 
         <Button
-            android:id="@+id/popup_quiz_from_character_yes"
+            android:id="@+id/popup_quiz_yes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/popup_yes"
@@ -60,7 +60,7 @@
         />
 
         <Button
-            android:id="@+id/popup_quiz_from_character_no"
+            android:id="@+id/popup_quiz_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/popup_no"
