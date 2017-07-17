@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">LearnHangul</string>
+    <string name="action_settings">Propiedades</string>
+
+    <!-- Error messages -->
+    <string name="error_load_vowels_progress">Error al cargar el progreso en las vocales.</string>
+    <string name="error_load_vowels_default">Error al cargar el archivo de vocales por defecto.</string>
+    <string name="error_load_consonants_progress">Error al cargar el progreso en las consonantes.</string>
+    <string name="error_load_consonants_default">Error al cargar el archivo de consonantes por defecto.</string>
+    <string name="error_save_vowels_progress">Error al guardar el progreso en las vocales.</string>
+    <string name="error_save_consonants_progress">Error al guardar el progreso en las consonantes.</string>
+
+    <!-- Button texts -->
+    <string name="button_main_study">Estudiar</string>
+    <string name="button_main_review">Repasar</string>
+    <string name="button_study_vowels">Vocales</string>
+    <string name="button_study_consonants">Consonantes</string>
+    <string name="button_study_tutorial">Cómo funciona Hangul</string>
+    <string name="button_review_from_character">Encontrar transcripción</string>
+    <string name="button_review_from_transcription">Encontrar carácter</string>
+
+    <!-- Popup window when pressing back in a quiz -->
+    <string name="popup_exit_quiz_text">¿Salir del test?</string>
+    <string name="popup_yes">Sí</string>
+    <string name="popup_no">No</string>
+
+    <!-- Popup window when trying to start a quiz without enough characters selected -->
+    <string name="popup_not_quiz_text">Debes seleccionar al menos 2 caracteres para poder jugar</string>
+    <string name="popup_not_quiz_understood">Entendido</string>
+
+    <!-- Information about the ListView elements in the character study section -->
+    <string name="character_column">Carácter</string>
+    <string name="transcription_column">Transcripción</string>
+
+    <!-- Information about correctness of an answer in the quizzes -->
+    <string name="answer_correct_pre">Correcto.&#160;</string>
+    <string name="answer_incorrect_pre">Incorrecto.&#160;</string>
+    <string name="answer_mid">&#160;corresponde a&#160;</string>
+
+</resources>
