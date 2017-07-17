@@ -47,6 +47,7 @@
         app:backgroundTint="@color/white"
         android:layout_below="@id/popup_not_quiz_element_divider"
         android:layout_centerHorizontal="true"
+        style="@style/Widget.AppCompat.Button"
     />
 
 </RelativeLayout>

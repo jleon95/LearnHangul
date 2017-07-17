@@ -57,6 +57,7 @@
             android:textAllCaps="false"
             android:backgroundTint="@color/white"
             app:backgroundTint="@color/white"
+            style="@style/Widget.AppCompat.Button"
         />
 
         <Button
@@ -70,6 +71,7 @@
             android:textAllCaps="false"
             android:backgroundTint="@color/white"
             app:backgroundTint="@color/white"
+            style="@style/Widget.AppCompat.Button"
         />
 
     </LinearLayout>
