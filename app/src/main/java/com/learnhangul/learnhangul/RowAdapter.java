@@ -16,6 +16,13 @@ class RowAdapter extends ArrayAdapter<Character> {
     private Character [] data;
     private static LayoutInflater inflater = null;
 
+    private static class ViewHolder{
+
+        private TextView character;
+        private TextView transcription;
+
+    }
+
     RowAdapter(Context context, ArrayList<Character> data) {
 
         super(context,0,data);
@@ -44,15 +51,22 @@ class RowAdapter extends ArrayAdapter<Character> {
     public View getView(int i, View convertView, ViewGroup parent) {
 
         View view = convertView;
-        if(view == null)
 
-            view = inflater.inflate(R.layout.list_row,null);
+        if(view == null) {
 
-        TextView character = (TextView) view.findViewById(R.id.row_layout_character);
-        character.setText(data[i].getCharacter());
-        selectColor(data[i],character);
-        TextView transcription = (TextView) view.findViewById(R.id.row_layout_transcription);
-        transcription.setText(data[i].getTranscription());
+            view = inflater.inflate(R.layout.list_row, null);
+            ViewHolder viewHolder = new ViewHolder();
+            viewHolder.character = (TextView) view.findViewById(R.id.row_layout_character);
+            viewHolder.transcription = (TextView) view.findViewById(R.id.row_layout_transcription);
+            view.setTag(viewHolder);
+
+        }
+
+        ViewHolder viewHolder = (ViewHolder) view.getTag();
+        viewHolder.character.setText(data[i].getCharacter());
+        selectColor(data[i], viewHolder.character);
+        viewHolder.transcription.setText(data[i].getTranscription());
+
         return view;
 
     }
