@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_quiz_from_syllable_character"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/quiz3_syllable_character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="70sp"
+        android:textColor="@color/red"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="60dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_quiz3_options1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/quiz3_first_option"
+            android:layout_width="40pt"
+            android:layout_height="30pt"
+            android:textSize="25sp"
+            android:textColor="@color/blue"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
+            />
+
+        <Button
+            android:id="@+id/quiz3_second_option"
+            android:layout_width="40pt"
+            android:layout_height="30pt"
+            android:textSize="25sp"
+            android:textColor="@color/blue"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_quiz3_options2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/quiz3_third_option"
+            android:layout_width="40pt"
+            android:layout_height="30pt"
+            android:textSize="25sp"
+            android:textColor="@color/blue"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
+            />
+
+        <Button
+            android:id="@+id/quiz3_fourth_option"
+            android:layout_width="40pt"
+            android:layout_height="30pt"
+            android:textSize="25sp"
+            android:textColor="@color/blue"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_quiz3_options3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/quiz3_fifth_option"
+            android:layout_width="40pt"
+            android:layout_height="30pt"
+            android:textSize="25sp"
+            android:textColor="@color/blue"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
+            />
+
+        <Button
+            android:id="@+id/quiz3_sixth_option"
+            android:layout_width="40pt"
+            android:layout_height="30pt"
+            android:textSize="25sp"
+            android:textColor="@color/blue"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
+            />
+
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/quiz3_bottom_fill"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:id="@+id/layout_quiz3_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/quiz3_result_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingEnd="20dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

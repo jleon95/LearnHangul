@@ -3,6 +3,7 @@
     <string name="action_settings">Propiedades</string>
 
     <!-- Error messages -->
+    <string name="error_load_syllables">Error al cargar el archivo de sílabas.</string>
     <string name="error_load_vowels_progress">Error al cargar el progreso en las vocales.</string>
     <string name="error_load_vowels_default">Error al cargar el archivo de vocales por defecto.</string>
     <string name="error_load_consonants_progress">Error al cargar el progreso en las consonantes.</string>
@@ -18,6 +19,8 @@
     <string name="button_study_tutorial">Cómo funciona Hangul</string>
     <string name="button_review_from_character">Encontrar transcripción</string>
     <string name="button_review_from_transcription">Encontrar carácter</string>
+    <string name="button_review_syllable_from_character">Encontrar transcripción de sílaba</string>
+    <string name="button_review_syllable_from_transcription">Encontrar sílaba</string>
 
     <!-- Popup window when pressing back in a quiz -->
     <string name="popup_exit_quiz_text">¿Salir del test?</string>

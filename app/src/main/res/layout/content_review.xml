@@ -26,7 +26,7 @@
         android:textAllCaps="false"
         android:backgroundTint="@color/blue"
         app:backgroundTint="@color/blue"
-        />
+    />
 
     <Button
         android:id="@+id/button_review_from_transcription"
@@ -39,6 +39,32 @@
         android:textAllCaps="false"
         android:backgroundTint="@color/blue"
         app:backgroundTint="@color/blue"
-        />
+    />
+
+    <Button
+        android:id="@+id/button_review_syllable_from_character"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_review_syllable_from_character"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/blue"
+        app:backgroundTint="@color/blue"
+    />
+
+    <Button
+        android:id="@+id/button_review_syllable_from_transcription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_review_syllable_from_transcription"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/blue"
+        app:backgroundTint="@color/blue"
+    />
 
 </LinearLayout>

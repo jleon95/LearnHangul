@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Character> vowels = new ArrayList<>();
     private ArrayList<Character> consonants = new ArrayList<>();
-    //private ArrayList<Character> syllables = new ArrayList<>();
+    private ArrayList<Character> syllables = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +70,16 @@ public class MainActivity extends AppCompatActivity {
                 System.err.println(getResources().getString(R.string.error_load_consonants_default));
 
             }
+        }
+
+        try{ // Try to load syllables.
+
+            syllables = ReadCharactersFromFile(String.valueOf(R.raw.syllables),true);
+
+        } catch (IOException ioe) {
+
+            System.err.println(getResources().getString(R.string.error_load_syllables));
+
         }
 
         setStudyButton();
@@ -228,6 +238,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent goReview = new Intent(MainActivity.this, ReviewActivity.class);
                 goReview.putExtra("com.learnhangul.learnhangul.vowels",vowels);
                 goReview.putExtra("com.learnhangul.learnhangul.consonants",consonants);
+                goReview.putExtra("com.learnhangul.learnhangul.syllables",syllables);
                 startActivityForResult(goReview,1);
 
             }

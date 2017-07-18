@@ -3,6 +3,7 @@
     <string name="action_settings">Settings</string>
 
     <!-- Error messages -->
+    <string name="error_load_syllables">Failed to load file for syllables.</string>
     <string name="error_load_vowels_progress">Failed to load progress status for vowels.</string>
     <string name="error_load_vowels_default">Failed to load default file for vowels.</string>
     <string name="error_load_consonants_progress">Failed to load progress status for consonants.</string>
@@ -18,6 +19,8 @@
     <string name="button_study_tutorial">How Hangul works</string>
     <string name="button_review_from_character">Find transcription</string>
     <string name="button_review_from_transcription">Find character</string>
+    <string name="button_review_syllable_from_character">Find transcription of syllable</string>
+    <string name="button_review_syllable_from_transcription">Find syllable</string>
 
     <!-- Popup window when pressing back in a quiz -->
     <string name="popup_exit_quiz_text">Are you sure you want to exit the quiz?</string>
