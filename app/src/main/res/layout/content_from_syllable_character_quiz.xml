@@ -27,7 +27,7 @@
 
         <Button
             android:id="@+id/quiz3_first_option"
-            android:layout_width="40pt"
+            android:layout_width="60pt"
             android:layout_height="30pt"
             android:textSize="25sp"
             android:textColor="@color/blue"
@@ -38,7 +38,7 @@
 
         <Button
             android:id="@+id/quiz3_second_option"
-            android:layout_width="40pt"
+            android:layout_width="60pt"
             android:layout_height="30pt"
             android:textSize="25sp"
             android:textColor="@color/blue"
@@ -59,8 +59,9 @@
 
         <Button
             android:id="@+id/quiz3_third_option"
-            android:layout_width="40pt"
+            android:layout_width="60pt"
             android:layout_height="30pt"
+            android:text="bbbbbbb"
             android:textSize="25sp"
             android:textColor="@color/blue"
             android:textAllCaps="false"
@@ -70,7 +71,7 @@
 
         <Button
             android:id="@+id/quiz3_fourth_option"
-            android:layout_width="40pt"
+            android:layout_width="60pt"
             android:layout_height="30pt"
             android:textSize="25sp"
             android:textColor="@color/blue"
@@ -91,7 +92,7 @@
 
         <Button
             android:id="@+id/quiz3_fifth_option"
-            android:layout_width="40pt"
+            android:layout_width="60pt"
             android:layout_height="30pt"
             android:textSize="25sp"
             android:textColor="@color/blue"
@@ -102,7 +103,7 @@
 
         <Button
             android:id="@+id/quiz3_sixth_option"
-            android:layout_width="40pt"
+            android:layout_width="60pt"
             android:layout_height="30pt"
             android:textSize="25sp"
             android:textColor="@color/blue"

@@ -25,9 +25,20 @@ public class CharactersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_characters);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.blue));
+        toolbar.setLogo(R.mipmap.ic_launcher);
+        toolbar.setTitleMarginStart(90);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
         characters = (ArrayList<Character>) getIntent().getExtras().get("com.learnhangul.learnhangul.characters");
+
+        if(characters.get(0).getCharacter().equals("ㅏ"))
+
+            toolbar.setTitle(getString(R.string.toolbar_title_vowels));
+
+        else
+
+            toolbar.setTitle(getString(R.string.toolbar_title_consonants));
 
         setCharacterList();
 

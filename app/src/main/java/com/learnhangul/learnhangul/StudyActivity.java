@@ -22,6 +22,9 @@ public class StudyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_study);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.red));
+        toolbar.setLogo(R.mipmap.ic_launcher);
+        toolbar.setTitleMarginStart(90);
+        toolbar.setTitle(getString(R.string.toolbar_title_study));
         setSupportActionBar(toolbar);
 
         vowels = (ArrayList<Character>) getIntent().getExtras().get("com.learnhangul.learnhangul.vowels");

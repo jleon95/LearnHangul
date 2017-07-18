@@ -11,6 +11,16 @@
     <string name="error_save_vowels_progress">Failed to save progress status for vowels.</string>
     <string name="error_save_consonants_progress">Failed to save progress status for consonants.</string>
 
+    <!-- Toolbar titles -->
+    <string name="toolbar_title_study">Study</string>
+    <string name="toolbar_title_vowels">Vowels</string>
+    <string name="toolbar_title_consonants">Consonants</string>
+    <string name="toolbar_title_review">Review</string>
+    <string name="toolbar_title_from_character">Choose the transcription</string>
+    <string name="toolbar_title_from_transcription">Choose the character</string>
+    <string name="toolbar_title_from_syllable_character">Choose the transcription</string>
+    <string name="toolbar_title_from_syllable_transcription">Choose the syllable</string>
+
     <!-- Button texts -->
     <string name="button_main_study">Study</string>
     <string name="button_main_review">Review</string>

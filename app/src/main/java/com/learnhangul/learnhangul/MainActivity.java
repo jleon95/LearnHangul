@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.blue));
+        toolbar.setLogo(R.mipmap.ic_launcher);
+        toolbar.setTitleMarginStart(90);
         setSupportActionBar(toolbar);
 
         try{ // Try to load a previous configuration.

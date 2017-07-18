@@ -38,6 +38,9 @@ public class FromSCharacterQuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_from_syllable_character_quiz);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.blue));
+        toolbar.setLogo(R.mipmap.ic_launcher);
+        toolbar.setTitleMarginStart(90);
+        toolbar.setTitle(getString(R.string.toolbar_title_from_syllable_character));
         setSupportActionBar(toolbar);
 
         syllables = (ArrayList<Character>) getIntent().getExtras().get("com.learnhangul.learnhangul.syllables");

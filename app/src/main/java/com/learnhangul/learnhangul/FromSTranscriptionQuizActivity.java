@@ -38,14 +38,17 @@ public class FromSTranscriptionQuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_from_syllable_transcription_quiz);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.blue));
+        toolbar.setLogo(R.mipmap.ic_launcher);
+        toolbar.setTitleMarginStart(90);
+        toolbar.setTitle(getString(R.string.toolbar_title_from_syllable_transcription));
         setSupportActionBar(toolbar);
 
         syllables = (ArrayList<Character>) getIntent().getExtras().get("com.learnhangul.learnhangul.syllables");
 
-        // Fill the pool of transcriptions to choose from as possible answers to a question.
+        // Fill the pool of characters to choose from as possible answers to a question.
         for(Character c: syllables)
 
-            characters.add(c.getTranscription());
+            characters.add(c.getCharacter());
 
         answerButtons.add((Button) findViewById(R.id.quiz4_first_option));
         answerButtons.add((Button) findViewById(R.id.quiz4_second_option));
@@ -107,12 +110,12 @@ public class FromSTranscriptionQuizActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Button button = (Button) view;
-                String transcription = button.getText().toString();
+                String character = button.getText().toString();
                 RelativeLayout result = (RelativeLayout) findViewById(R.id.layout_quiz4_result);
                 TextView result_text = (TextView) findViewById(R.id.quiz4_result_text);
 
                 // Notification for correct answer. When using syllables, there are no progress changes.
-                if(transcription.equals(chosen.getTranscription())) {
+                if(character.equals(chosen.getCharacter())) {
 
                     result.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.selected_green_learned));
                     result_text.setText(getResources().getText(R.string.answer_correct_pre)
@@ -149,18 +152,18 @@ public class FromSTranscriptionQuizActivity extends AppCompatActivity {
     public void setNextQuestion(){
 
         chosen = chooseNext();
-        HashSet<String> possibleTranscriptions = new HashSet<>();
-        TextView characterText = (TextView) findViewById(R.id.quiz4_syllable_transcription);
-        characterText.setText(chosen.getCharacter());
-        possibleTranscriptions.add(chosen.getTranscription());
+        HashSet<String> possibleCharacters = new HashSet<>();
+        TextView transcriptionText = (TextView) findViewById(R.id.quiz4_syllable_transcription);
+        transcriptionText.setText(chosen.getTranscription());
+        possibleCharacters.add(chosen.getCharacter());
 
-        while(possibleTranscriptions.size() < 6) // A set makes avoiding repetitions easier
+        while(possibleCharacters.size() < 6) // A set makes avoiding repetitions easier
 
-            possibleTranscriptions.add(characters.get(rng.nextInt(characters.size())));
+            possibleCharacters.add(characters.get(rng.nextInt(characters.size())));
 
         int buttonIndex = 0;
 
-        for(String s: possibleTranscriptions) {
+        for(String s: possibleCharacters) {
 
             answerButtons.get(buttonIndex).setText(s);
             buttonIndex += 1;
