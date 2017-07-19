@@ -41,4 +41,17 @@
         app:backgroundTint="@color/blue"
     />
 
+    <Button
+        android:id="@+id/button_study_about_hangul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_study_about_hangul"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/blue"
+        app:backgroundTint="@color/blue"
+    />
+
 </LinearLayout>

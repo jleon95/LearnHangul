@@ -10,6 +10,8 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
+import static android.R.attr.button;
+
 public class StudyActivity extends AppCompatActivity {
 
     private ArrayList<Character> vowels = new ArrayList<>();
@@ -32,6 +34,8 @@ public class StudyActivity extends AppCompatActivity {
 
         setVowelsButton();
         setConsonantsButton();
+        setAboutHangulButton();
+
     }
 
     @Override
@@ -90,6 +94,20 @@ public class StudyActivity extends AppCompatActivity {
                 Intent goConsonants = new Intent(StudyActivity.this, CharactersActivity.class);
                 goConsonants.putExtra("com.learnhangul.learnhangul.characters",consonants);
                 startActivityForResult(goConsonants,2);
+
+            }
+        });
+    }
+
+    private void setAboutHangulButton(){
+
+        final Button study = (Button) findViewById(R.id.button_study_about_hangul);
+        study.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent goAboutHangul = new Intent(StudyActivity.this, AboutHangulActivity.class);
+                startActivity(goAboutHangul);
 
             }
         });

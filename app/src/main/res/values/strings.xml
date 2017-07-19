@@ -15,6 +15,7 @@
     <string name="toolbar_title_study">Study</string>
     <string name="toolbar_title_vowels">Vowels</string>
     <string name="toolbar_title_consonants">Consonants</string>
+    <string name="toolbat_title_about_hangul">About Hangul</string>
     <string name="toolbar_title_review">Review</string>
     <string name="toolbar_title_from_character">Choose the transcription</string>
     <string name="toolbar_title_from_transcription">Choose the character</string>
@@ -26,7 +27,7 @@
     <string name="button_main_review">Review</string>
     <string name="button_study_vowels">Vowels</string>
     <string name="button_study_consonants">Consonants</string>
-    <string name="button_study_tutorial">How Hangul works</string>
+    <string name="button_study_about_hangul">How Hangul works</string>
     <string name="button_review_from_character">Find transcription</string>
     <string name="button_review_from_transcription">Find character</string>
     <string name="button_review_syllable_from_character">Find transcription of syllable</string>
@@ -49,5 +50,56 @@
     <string name="answer_correct_pre">Correct.&#160;</string>
     <string name="answer_incorrect_pre">Incorrect.&#160;</string>
     <string name="answer_mid">&#160;matches with&#160;</string>
+
+    <!-- Text in the About Hangul activity -->
+    <string name="about_hangul">
+        \t\tThe Korean alphabet, known as <b>Hangul</b> or <b>Hangeul</b> (한글) in South Korea,
+        has been in use, to a greater or lesser extent, since its creation in the 15th century.
+        Currently, both South and North Korea favor its use over <b>Hanja</b> (한자 / 漢字)
+        or Chinese characters.\n\n
+
+        \t\tIt is composed of 10 <b>vowels</b> and 14 <b>consonants</b> that can be combined to form
+        <b>syllables</b>. These syllables must begin with a consonant, after which we must place a
+        vowel. Syllables can end either with a vowel or with a consonant.\n\n
+
+        \t\t<b>Vowels.</b> We can distinguish two main types: vertical ones (ㅏ or ㅓ) and horizontal
+        ones (ㅗ or ㅜ). The difference between them lies in where the initial consonant of the
+        syllable will be placed; for the vertical ones, it will be on its left, and for the
+        horizontal ones, it will be above them. In addition, we have a set of special vowels that
+        contain the sound <i>y</i> (ㅑ or ㅛ) and behave just like we have learned. Finally, we can
+        form diphthongs, like ㅐ or ㅟ; you can observe that the former is just like before, and the
+        latter has a little gap in its upper left corner for you to place a consonant. As every one
+        of them behaves exactly like a vowel in a syllable, we have grouped them together for
+        simplicity.\n\n
+
+        \t\t<b>Consonants.</b> Consonants are the characters that begin and optionally end a
+        syllable. A special case here is ㅇ, which acts as a null consonant when our syllable starts
+        with a vowel, but has its own sound when we place it at the end of the syllable. This
+        pattern of having different sounds depending on their location inside the syllable is not
+        unique to ㅇ: ㄷ, ㅅ, ㅆ, ㅈ, ㅊ and ㅎ all change their transcription to <i>t</i> when placed
+        at the end; ㄱ and ㄲ change to <i>k</i>; ㅂ changes to <i>p</i>.\n\n
+
+        \t\t<b>Syllables.</b> These are the basic units used to form words. Syllables are compound
+        character blocks that contain one or more consonants and exactly one vowel (including
+        diphthongs and the vowels with <i>y</i> sounds). To build them, we follow a similar approach
+        to that used when grouping a single vowel with a consonant: the first letters tend to be
+        placed at the top and/or on the left, while the final letters are usually at the bottom,
+        with any medial ones being just between them in the remaining gap.\n\n
+
+        \t\t<b>Examples.</b>\n
+        \t\t-<b>Vowels:</b> ㅏ (<i>a</i>) and ᅩ (<i>o</i>), associated with the syllables 아 and 오.\n
+        \t\t-<b>Syllables:</b>\n
+        \t\t\t수 (<i>su</i>): ㅅ (<i>s</i>) + ㅜ (<i>u</i>)\n
+        \t\t\t쟁 (<i>jaeng</i>): ㅈ (<i>j</i>) + ㅐ (<i>ae</i>) + ㅇ (<i>ng</i>)\n
+        \t\t\t넣 (<i>neot</i>): ㄴ (<i>n</i>) + ㅓ (<i>eo</i>) + ㅎ (<i>t</i> at the end of a syllable)\n
+        \t\t\t한 (<i>han</i>): ㅎ (<i>h</i>) + ㅏ (<i>a</i>) + ㄴ (<i>n</i>)\n
+        \t\t\t글 (<i>geul</i>): ㄱ (<i>g</i>) + ㅡ (<i>eu</i>) + ㄹ (<i>l</i>).\n\n
+
+        \t\t<b>Note on pronunciation.</b> The transcriptions provided here are just a way to write
+        the characters using the Latin alphabet, and thus they do not stand for pronunciations.
+        Inclusion of audio files to help in this matter is not currently planned, but we encourage
+        learners to expose themselves to native material as soon as possible.
+
+    </string>
 
 </resources>

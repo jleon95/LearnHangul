@@ -11,12 +11,22 @@
     <string name="error_save_vowels_progress">Error al guardar el progreso en las vocales.</string>
     <string name="error_save_consonants_progress">Error al guardar el progreso en las consonantes.</string>
 
+    <!-- Toolbar titles -->
+    <string name="toolbar_title_study">Estudiar</string>
+    <string name="toolbar_title_vowels">Vocales</string>
+    <string name="toolbar_title_consonants">Consonantes</string>
+    <string name="toolbar_title_review">Repasar</string>
+    <string name="toolbar_title_from_character">Elegir la transcripción</string>
+    <string name="toolbar_title_from_transcription">Elegir el carácter</string>
+    <string name="toolbar_title_from_syllable_character">Elegir la transcripción</string>
+    <string name="toolbar_title_from_syllable_transcription">Elegir la sílaba</string>
+
     <!-- Button texts -->
     <string name="button_main_study">Estudiar</string>
     <string name="button_main_review">Repasar</string>
     <string name="button_study_vowels">Vocales</string>
     <string name="button_study_consonants">Consonantes</string>
-    <string name="button_study_tutorial">Cómo funciona Hangul</string>
+    <string name="button_study_about_hangul">Cómo funciona Hangul</string>
     <string name="button_review_from_character">Encontrar transcripción</string>
     <string name="button_review_from_transcription">Encontrar carácter</string>
     <string name="button_review_syllable_from_character">Encontrar transcripción de sílaba</string>
@@ -39,5 +49,59 @@
     <string name="answer_correct_pre">Correcto.&#160;</string>
     <string name="answer_incorrect_pre">Incorrecto.&#160;</string>
     <string name="answer_mid">&#160;corresponde a&#160;</string>
+
+    <!-- Text in the About Hangul activity -->
+    <string name="about_hangul">
+        \t\tEl alfabeto coreano, conocido como <b>Hangul</b> o <b>Hangeul</b> (한글) en Corea del Sur,
+        ha sido empleado, en mayor o menor medida, desde su creación en el siglo XV.
+        Actualmente, tanto Corea del Sur como Corea del Norte favorecen su uso frente al
+        <b>Hanja</b> (한자 / 漢字) o caracteres de origen chino.\n\n
+
+        \t\tEstá compuesto de 10 <b>vocales</b> y 14 <b>consonantes</b> que pueden combinarse para
+        formar <b>sílabas</b>. Estas sílabas deben comenzar con una consonante, tras la cual debe ir
+        una vocal. Las sílabas pueden acabar tanto en vocal como en consonante.\n\n
+
+        \t\t<b>Vocales.</b> Podemos distinguir dos tipos principales: verticales (ㅏ o ㅓ) y
+        horizontales (ㅗ o ㅜ). La diferencia radica en el lugar en que se colocará la consonante
+        inicial de la sílaba; para las verticales, estará a su izquierda, y para las horizontales,
+        estará sobre ellas. Además, tenemos un conjunto de vocales especiales que contienen el
+        sonido <i>y</i> (ㅑ o ㅛ) y que se comportan tal como hemos aprendido. Finalmente, podemos
+        formar diptongos, como ㅐ o ㅟ; se puede observar que el primero es como lo que ya hemos
+        visto, y el segundo tiene un pequeño hueco en la parte superior izquierda para colocar la
+        consonante. Ya que todos y cada uno de los caracteres vistos aquí se comporta exactamente
+        como una vocal en las sílabas, los hemos agrupado por simplicidad.\n\n
+
+        \t\t<b>Consonantes.</b> Las consonantes son los caracteres por los que empieza y
+        opcionalmente acaba una sílaba. Un caso especial aquí es ㅇ, que actúa como una consonante
+        nula cuando nuestra sílaba empieza por una vocal, pero que aun así tiene su propio sonido
+        asociado cuando se encuentra al final de una sílaba. Además, no es la única consonante que
+        se comporta de forma distinta según se encuentre al principio o al final; así, ㄷ, ㅅ, ㅆ, ㅈ
+        , ㅊ y ㅎ pasan a transcribirse como <i>t</i> cuando están al final; ㄱ y ㄲ cambian a
+        <i>k</i>; ㅂ cambia a <i>p</i>.\n\n
+
+        \t\t<b>Sílabas.</b> Son las unidades básicas que utilizamos para formar palabras. Las
+        sílabas son bloques compuestos por una o más consonantes y exactamente una vocal (incluyendo
+        diptongos y las vocales con sonidos <i>y</i>). Para construirlas, seguimos una estrategia
+        parecida a cuando juntamos una vocal y una consonante: las primeras letras de la sílaba
+        suelen estar arriba y/o a la izquierda, mientras que las letras finales están en la parte
+        inferior; las posibles letras intermedias suelen estar entre ellas ocupando el espacio que
+        dejan dentro del bloque.\n\n
+
+        \t\t<b>Ejemplos.</b>\n
+        \t\t-<b>Vocales:</b> ㅏ (<i>a</i>) y ᅩ (<i>o</i>), asociadas a las sílabas 아 y 오.\n
+        \t\t-<b>Sílabas:</b>\n
+        \t\t\t수 (<i>su</i>): ㅅ (<i>s</i>) + ㅜ (<i>u</i>)\n
+        \t\t\t쟁 (<i>jaeng</i>): ㅈ (<i>j</i>) + ㅐ (<i>ae</i>) + ㅇ (<i>ng</i>)\n
+        \t\t\t넣 (<i>neot</i>): ㄴ (<i>n</i>) + ㅓ (<i>eo</i>) + ㅎ (<i>t</i> al final de la sílaba)\n
+        \t\t\t한 (<i>han</i>): ㅎ (<i>h</i>) + ㅏ (<i>a</i>) + ㄴ (<i>n</i>)\n
+        \t\t\t글 (<i>geul</i>): ㄱ (<i>g</i>) + ㅡ (<i>eu</i>) + ㄹ (<i>l</i>).\n\n
+
+        \t\t<b>Nota sobre pronunciación.</b> Las transcripciones que se proveen son sólo una forma
+        de escribir estos caracteres usando nuestro alfabeto, y por ello no representan
+        pronunciaciones. La inclusión de audio para ayudar en este aspecto no se contempla
+        actualmente, pero se anima a los estudiantes de la lengua que se expongan a material nativo
+        tan pronto como les sea posible.
+
+    </string>
 
 </resources>
