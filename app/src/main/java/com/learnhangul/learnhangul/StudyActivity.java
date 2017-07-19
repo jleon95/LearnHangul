@@ -10,8 +10,6 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
-import static android.R.attr.button;
-
 public class StudyActivity extends AppCompatActivity {
 
     private ArrayList<Character> vowels = new ArrayList<>();

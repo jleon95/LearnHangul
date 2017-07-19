@@ -12,8 +12,6 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import static android.R.attr.data;
-
 public class CharactersActivity extends AppCompatActivity {
 
     private ArrayList<Character> characters = new ArrayList<>();
