@@ -1,10 +1,10 @@
 # LearnHangul
 
-It's been almost four years since I started learning Japanese in my free time. Now, I have reached a point in my progress from where I can look back and spot some things that have been truly useful, although there's still a lot more to learn before I can consider myself proficient.
+It's been almost four years since I started learning Japanese in my free time. I have reached a point in my progress now from where I can look back and spot some things that have been truly useful, although there's still a lot more to learn before I can consider myself proficient.
 
-One of the challenges of learning a language is dealing with massive amounts of vocabulary and, in some instances, new alphabets, syllabaries or even sets of characters with their own associated meanings like Kanji, Hanzi or Hanja. Against the need to repeat those items many times until they stick in your mind, I've found two approaches to be particularly effective: Spaced Repetition and gamification. This is about the latter.
+One of the challenges when learning a language is dealing with massive amounts of vocabulary and, in some instances, new alphabets, syllabaries or even sets of characters with their own associated meanings like Kanji, Hanzi or Hanja. Against the need to repeat those items many times until they stick in your mind, I've found two approaches to be particularly effective: Spaced Repetition and gamification. This is about the latter.
 
-Some months ago, I started to take an interest in learning Korean as a future project after I'm satisfied enough with my Japanese skills to move on to another language. Having had some experience with Android programming, it dawned on me that perhaps I could implement what had already been proven useful to me in Japanese.
+Some months ago, I started to take an interest in learning Korean, although that must be once I'm proficient enough in Japanese (as long as learning these two languages at the same time may hamper the process). Keeping that in mind and having had some experience with Android programming, it dawned on me that perhaps I could implement what had already been proven useful to me in Japanese.
 
 With that in mind, and drawing heavy inspiration from a great Android app I use every day to review Japanese vocabulary [[**Obenkyo**](https://play.google.com/store/apps/details?id=com.Obenkyo "Obenkyo")], I decided I'd emulate what it does best in an app of my own doing, thus killing two birds with one stone. As the similarities with **Obenkyo** and other apps with the same purpose are not few, this won't be released and will remain only as a (more than I expected) useful programming exercise.
 
